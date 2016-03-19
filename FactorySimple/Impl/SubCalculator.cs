@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattern
+namespace FactorySimple.Impl
 {
-    class Program
+    public class SubCalculator : BaseCalculator
     {
-        static void Main(string[] args)
+        public override int GetResult()
         {
+            return A - B;
         }
     }
 }
