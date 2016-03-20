@@ -34,9 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lboxResult = new System.Windows.Forms.ListBox();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textPrice
@@ -88,14 +89,7 @@
             this.btnOk.TabIndex = 6;
             this.btnOk.Text = "确定";
             this.btnOk.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(28, 47);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 193);
-            this.textBox4.TabIndex = 7;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // cbType
             // 
@@ -103,7 +97,8 @@
             this.cbType.Items.AddRange(new object[] {
             "正常收费",
             "九折",
-            "八折"});
+            "八折",
+            "300返100"});
             this.cbType.Location = new System.Drawing.Point(334, 156);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(126, 20);
@@ -118,14 +113,33 @@
             this.btnReset.Text = "重置";
             this.btnReset.UseVisualStyleBackColor = true;
             // 
+            // lboxResult
+            // 
+            this.lboxResult.FormattingEnabled = true;
+            this.lboxResult.ItemHeight = 12;
+            this.lboxResult.Location = new System.Drawing.Point(35, 47);
+            this.lboxResult.Name = "lboxResult";
+            this.lboxResult.Size = new System.Drawing.Size(213, 172);
+            this.lboxResult.TabIndex = 10;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Location = new System.Drawing.Point(189, 228);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(11, 12);
+            this.lbTotal.TabIndex = 11;
+            this.lbTotal.Text = "0";
+            // 
             // CashAccept
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 305);
+            this.Controls.Add(this.lbTotal);
+            this.Controls.Add(this.lboxResult);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.cbType);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -147,9 +161,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.ListBox lboxResult;
+        private System.Windows.Forms.Label lbTotal;
     }
 }
 
