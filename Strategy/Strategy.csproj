@@ -54,6 +54,7 @@
       <DependentUpon>CashAccept.cs</DependentUpon>
     </Compile>
     <Compile Include="CashAcceptFactory.cs" />
+    <Compile Include="CashContext.cs" />
     <Compile Include="Impl\CashNormal.cs" />
     <Compile Include="Impl\CashRebate.cs" />
     <Compile Include="Impl\CashReturn.cs" />
