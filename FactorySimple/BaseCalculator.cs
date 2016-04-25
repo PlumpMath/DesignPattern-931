@@ -7,5 +7,8 @@
         public int B { get; set; }
 
         public abstract int GetResult();
+        
+
+
     }
 }
